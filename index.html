@@ -9,8 +9,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <title>Turn.js 实现翻书效果</title>
     <link rel="stylesheet" type="text/css" href="css/basic.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont/demo.css"/>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
+    <script type="text/javascript" src="js/iconfont.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
@@ -33,11 +35,20 @@
 </div>
 <div class="flipbook-viewport" style="display:none;">
     <!--底部栏-->
-    <div class="icon"><img style="pointer-events:none;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAc0lEQVQ4T2M8ffp0AyMjYz0DDvD///9GU1PTBpA0MWoZz5w58x+XYTBxExMTRhCbGLVwA2GakA2HGYBuID61owaiRg9FYYgvpkmKZWLSFknpkFAaJFUenGCpCRip7mVishNJkYKeNEazHrhoGxylzaDNegA3lfMDDJSaxQAAAABJRU5ErkJggg=="></div>
-    <div class="previousPage"></div>
-    <div class="nextPage"></div>
-    <div class="return"></div>
-    <img class="btnImg" src="./image/btn.gif" style="display: none"/>
+    <div class="footer">
+        <div class="icon">
+            <i class="iconfont">&#xe60f;</i>
+        </div><div class="catalogue">
+            <i class="iconfont">&#xe603;</i>
+        </div><div class="previousPage">
+            <i class="iconfont">&#xe507;</i>
+        </div><div class="return">
+            <i class="iconfont">&#xeb10;</i>
+        </div><div class="nextPage">
+            <i class="iconfont">&#xe501;</i>
+        </div>
+    </div>
+    <!--<img class="btnImg" src="./image/btn.gif" style="display: none"/>-->
     <!--主体内容-->
     <div class="container">
         <div class="flipbook"></div>
@@ -46,12 +57,106 @@
     <!--有图目录-->
     <div id="phoneThum">
         <div class="line_wrapper">
-            <div class="img_wrapper" id="0">
+            <div class="img_wrapper" id="1">
                 <div class="img">
                     <img src="./image/0001.jpg">
                 </div>
                 <p class="page_number">
                     <span>1</span>
+                </p>
+            </div>
+            <div class="img_wrapper" id="2">
+                <div class="img">
+                    <img src="./image/0002.jpg">
+                </div>
+                <p class="page_number">
+                    <span>2</span>
+                </p>
+            </div>
+            <div class="img_wrapper" id="3">
+                <div class="img">
+                    <img src="./image/0003.jpg">
+                </div>
+                <p class="page_number">
+                    <span>3</span>
+                </p>
+            </div>
+        </div>
+        <div class="line_wrapper">
+            <div class="img_wrapper" id="4">
+                <div class="img">
+                    <img src="./image/0004.jpg">
+                </div>
+                <p class="page_number">
+                    <span>4<span>
+                </p>
+            </div>
+            <div class="img_wrapper" id="5">
+                <div class="img">
+                    <img src="./image/0005.jpg">
+                </div>
+                <p class="page_number">
+                    <span>5</span>
+                </p>
+            </div>
+            <div class="img_wrapper" id="6">
+                <div class="img">
+                    <img src="./image/0006.jpg">
+                </div>
+                <p class="page_number">
+                    <span>6</span>
+                </p>
+            </div>
+        </div>
+        <div class="line_wrapper">
+            <div class="img_wrapper" id="7">
+                <div class="img">
+                    <img src="./image/0007.jpg">
+                </div>
+                <p class="page_number">
+                    <span>7</span>
+                </p>
+            </div>
+            <div class="img_wrapper" id="8">
+                <div class="img">
+                    <img src="./image/0008.jpg">
+                </div>
+                <p class="page_number">
+                    <span>8</span>
+                </p>
+            </div>
+            <div class="img_wrapper" id="9">
+                <div class="img">
+                    <img src="./image/0009.jpg">
+                </div>
+                <p class="page_number">
+                    <span>9</span>
+                </p>
+            </div>
+        </div>
+        <div class="line_wrapper">
+            <div class="img_wrapper" id="10">
+                <div class="img">
+                    <img src="./image/0010.jpg">
+                </div>
+                <p class="page_number">
+                    <span>10</span>
+                </p>
+            </div>
+            <div class="img_wrapper" id="11">
+                <div class="img">
+                    <img src="./image/0011.jpg">
+                </div>
+                <p class="page_number">
+                    <span>11</span>
+                </p>
+            </div>
+            <div class="img_wrapper" id="12">
+                <div class="img">
+                    <img src="./image/0012.jpg">
+                </div>
+                <p class="page_number">
+                    <span>12</span>
                 </p>
             </div>
         </div>
@@ -77,11 +182,54 @@
                     <p class="description">页 4</p>
                 </div>
                 <div class="item">
-                    <p class="description" style="margin-left: 15px;">页 5</p>
+                    <p class="description">页 5</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 6</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 7</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 8</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 9</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 10</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 11</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 12</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 13</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 14</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 15</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 16</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 17</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 18</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 19</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 <script>
     //自定义仿iphone弹出层
     (function ($) {
@@ -152,6 +300,24 @@
         }, function () {
         });
     });
+    
+    //显示目录
+    $('.footer .icon').click(function () {
+        $('#phoneThum').fadeIn();
+        $('.tableofcontent_form').fadeOut();
+    })
+    $('#phoneThum').click(function () {
+        $('#phoneThum').fadeOut();
+    })
+
+    //显示页码目录
+    $('.footer .catalogue').click(function () {
+        $('.tableofcontent_form').fadeIn();
+        $('#phoneThum').fadeOut();
+    })
+    $('.close').click(function () {
+        $('.tableofcontent_form').fadeOut();
+    })
 </script>
 </body>
 </html>

@@ -267,22 +267,36 @@ body{
 	left: 45%;
 	z-index: 1000009;
 	color: #ffffff;
-	/* border: 1px solid red; */
 }
 
+/*目录图标*/
+.flipbook-viewport .footer {
+	width: 100%;
+	height: 9%;
+	position: fixed;
+	bottom: 0;
+	z-index: 97;
+	display: none;
+}
+.footer div{
+	display: inline-block;
+	text-align: center;
+	width: 20%;
+	padding-top: 2.5%;
+}
 
 /*上一页*/
-.previousPage{
+./*previousPage{
 	width: 16%;
 	height: 20%;
 	position: fixed;
 	top: 80%;
 	left: 22%;
 	z-index: 999999;
-	/*border:1px solid red;*/
+	!*border:1px solid red;*!
 	background: transparent !important;
 }
-/*返回目录页按钮*/
+!*返回目录页按钮*!
 .return{
 	width: 16%;
 	height: 20%;
@@ -290,11 +304,11 @@ body{
 	top: 80%;
 	left: 40%;
 	z-index: 999999;
-	/*border:1px solid blue;*/
+	!*border:1px solid blue;*!
 	background: transparent !important;
 }
 
-/*下一页*/
+!*下一页*!
 .nextPage{
 	width: 16%;
 	height: 20%;
@@ -302,9 +316,9 @@ body{
 	top: 80%;
 	left: 58%;
 	z-index: 999999;
-	/*border:1px solid red;*/
+	!*border:1px solid red;*!
 	background: transparent !important;
-}
+}*/
 
 
 .btnImg{
@@ -385,27 +399,19 @@ body{
 	height: 30px;
 	line-height: 30px;
 	color: #ffffff;
-	z-index: 999999;
+	z-index: 97;
 	border-radius: 3px;
 	left: 0;
 	right: 0;
 	margin: auto;
 	bottom: 100px;
 }
-/*目录图标*/
-.flipbook-viewport .icon {
-	width: 16%;
-	height: 20%;
-	position: fixed;
-	top: 94%;
-	left: 13%;
-	z-index: 999999;
-	background: transparent !important;
-}
+
+
 /*有图目录*/
 #phoneThum{
 	opacity: 1;
-	display: block;
+	display: none;
 	overflow-y: auto;
 	overflow-x: hidden;
 	text-align: center;
@@ -461,6 +467,7 @@ body{
 
 /*页数目录*/
 .tableofcontent_form{
+	display: none;
 	color: rgb(204, 204, 204);
 	position: absolute;
 	top: 0;
@@ -468,7 +475,7 @@ body{
 	overflow: hidden;
 	left: -310px;
 	width: 80%;
-	height: 91%;
+	height: 100%;
 	transform: translate3d(310px, 0px, 0px);
 	z-index: 98;
 }
@@ -488,6 +495,7 @@ body{
 .tableofcontent_form .stage{
 	position: relative;
 	width: 100%;
+	height: 95%;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
@@ -500,7 +508,7 @@ body{
 	font-family: Calibri;
 }
 .tableofcontent_form .stage .swiper .item {
-	padding: 2px 12px;
+	padding: 10px 12px;
 	font-size: 15px;
 	cursor: pointer;
 	position: relative;
@@ -511,4 +519,23 @@ body{
 	display: inline-block;
 	margin-left: 15px;
 	color: rgb(204, 204, 204);
+	padding: 3px 0;
 }
+
+/*iconfont*/
+@font-face {
+	font-family: 'iconfont';
+	src: url('./iconfont/iconfont.eot');
+	src: url('./iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+	url('./iconfont/iconfont.woff') format('woff'),
+	url('./iconfont/iconfont.ttf') format('truetype'),
+	url('./iconfont/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+	font-family:"iconfont" !important;
+	font-size:30px;
+	font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+ }
