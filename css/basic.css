@@ -374,3 +374,141 @@ body{
 .g-plugin-confirm > div > div:nth-child(2) a:last-child {
 	border-right: 0;
 }
+
+/*提醒这是最后一页*/
+.container .last_page{
+	display: none;
+	position: absolute;
+	background: rgba(0,0,0,0.4);
+	text-align: center;
+	width: 160px;
+	height: 30px;
+	line-height: 30px;
+	color: #ffffff;
+	z-index: 999999;
+	border-radius: 3px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: 100px;
+}
+/*目录图标*/
+.flipbook-viewport .icon {
+	width: 16%;
+	height: 20%;
+	position: fixed;
+	top: 94%;
+	left: 13%;
+	z-index: 999999;
+	background: transparent !important;
+}
+/*有图目录*/
+#phoneThum{
+	opacity: 1;
+	display: block;
+	overflow-y: auto;
+	overflow-x: hidden;
+	text-align: center;
+	position: absolute;
+	z-index: 98;
+	background: rgba(51, 51, 51, 0.8);
+	width: 100%;
+	left: 0;
+	top: 0;
+	height: 91%;
+}
+#phoneThum .line_wrapper{
+	text-align: left;
+	display: inline-block;
+	padding: 0 0 20px;
+	width: 350px;
+}
+#phoneThum .line_wrapper .img_wrapper{
+	display: inline-block;
+	cursor: pointer;
+	width: 90px;
+	height: 147.715px;
+	padding: 10px 0 0 20px;
+	text-align: center;
+}
+#phoneThum .line_wrapper .img_wrapper .img{
+	width: 84px;
+	height: 120.715px;
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 3px;
+	border-color: transparent;
+}
+#phoneThum .line_wrapper .img_wrapper .img img{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(255, 255, 255);
+}
+#phoneThum .line_wrapper .img_wrapper .page_number{
+	width: 84px;
+	height: 15px;
+	line-height: 15px;
+	vertical-align: middle;
+	color: rgb(238, 238, 238);
+	font-family: Arial;
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+	border-style: solid;
+	border-width: 3px;
+	border-color: transparent;
+}
+
+/*页数目录*/
+.tableofcontent_form{
+	color: rgb(204, 204, 204);
+	position: absolute;
+	top: 0;
+	background-color: rgb(48, 48, 48);
+	overflow: hidden;
+	left: -310px;
+	width: 80%;
+	height: 91%;
+	transform: translate3d(310px, 0px, 0px);
+	z-index: 98;
+}
+.tableofcontent_form .form_title{
+	font-family: "Arial";
+	line-height: 36px;
+	padding: 0 15px;
+	margin: 0;
+	font-size: 18px;
+}
+.tableofcontent_form .form_title .close {
+	position: absolute;
+	right: 10px;
+	left: auto;
+	top: 6px;
+}
+.tableofcontent_form .stage{
+	position: relative;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.tableofcontent_form .stage .swiper{
+	width: 100%;
+	color: rgb(204, 204, 204);
+	text-align: left;
+	line-height: 20px;
+	font-size: 15px;
+	font-family: Calibri;
+}
+.tableofcontent_form .stage .swiper .item {
+	padding: 2px 12px;
+	font-size: 15px;
+	cursor: pointer;
+	position: relative;
+	margin-right: 5px;
+	margin-left: 0;
+}
+.tableofcontent_form .stage .swiper .item .description {
+	display: inline-block;
+	margin-left: 15px;
+	color: rgb(204, 204, 204);
+}

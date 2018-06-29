@@ -32,15 +32,56 @@
     <div class="number"></div>
 </div>
 <div class="flipbook-viewport" style="display:none;">
+    <!--底部栏-->
+    <div class="icon"><img style="pointer-events:none;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAc0lEQVQ4T2M8ffp0AyMjYz0DDvD///9GU1PTBpA0MWoZz5w58x+XYTBxExMTRhCbGLVwA2GakA2HGYBuID61owaiRg9FYYgvpkmKZWLSFknpkFAaJFUenGCpCRip7mVishNJkYKeNEazHrhoGxylzaDNegA3lfMDDJSaxQAAAABJRU5ErkJggg=="></div>
     <div class="previousPage"></div>
     <div class="nextPage"></div>
     <div class="return"></div>
     <img class="btnImg" src="./image/btn.gif" style="display: none"/>
+    <!--主体内容-->
     <div class="container">
-        <div class="flipbook">
+        <div class="flipbook"></div>
+        <div class="last_page">这已经是最后一页了</div>
+    </div>
+    <!--有图目录-->
+    <div id="phoneThum">
+        <div class="line_wrapper">
+            <div class="img_wrapper" id="0">
+                <div class="img">
+                    <img src="./image/0001.jpg">
+                </div>
+                <p class="page_number">
+                    <span>1</span>
+                </p>
+            </div>
         </div>
     </div>
-</div>
+    <!--目录页数-->
+    <div class="tableofcontent_form phone">
+        <p class="form_title">
+            <span>目录</span>
+            <img class="close" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAdUlEQVRIS2NkoDFgpLH5DKMWEAzh0SCiPIjOnDnzH2SKiYkJRnDik4PZTDAOYIagW4JLHN1LBC0AaUA3jFjDQXqJsgDdEpgrsQUbWT6AaSLF5UTHATbDqe4DmsYBzVMRzfMBwaxKQAHRyZRci0YtIBhyQz+IAAW6PBk5V8b8AAAAAElFTkSuQmCC">
+        </p>
+        <div class="stage">
+            <div class="swiper">
+                <div class="item">
+                    <p class="description">页 1</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 2</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 3</p>
+                </div>
+                <div class="item">
+                    <p class="description">页 4</p>
+                </div>
+                <div class="item">
+                    <p class="description" style="margin-left: 15px;">页 5</p>
+                </div>
+            </div>
+        </div>
+    </div>
 <script>
     //自定义仿iphone弹出层
     (function ($) {

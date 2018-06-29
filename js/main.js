@@ -153,9 +153,14 @@ function loading() {
                                 } else {
                                     $(".catalog").css("display", "none");
                                 }
+                                if (page === 41) {
+                                    $('.last_page').show();
+                                } else {
+                                    $('.last_page').hide();
+                                }
                             }
                         }
-                    })
+                    });
                 }
                 yepnope({
                     test: Modernizr.csstransforms,
